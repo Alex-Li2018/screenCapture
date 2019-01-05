@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.6",
+    "fabric": "^2.4.6",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jquery": "^3.3.1",
     "vue": "^2.5.17"
   },
   "devDependencies": {
@@ -17,6 +22,8 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
