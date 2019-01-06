@@ -325,11 +325,16 @@ export default {
       }
       this.fp.setZoom(nextZoom)
     },
-    changeEditorColor () {
+    changeEditorColor (val) {
       return () => {}
     },
+    //完成按钮
     onURL () {
-      this.fp.toDataURL('image/png')
+      let url = this.fp.toDataURL('image/png')
+      //生成图片并下载下来
+      download(url, "测试", 'image/png');
+      //关闭界面
+      document.querySelector('.wrap_inner').style.display = "none"
     }
   },
   mounted () {
@@ -337,7 +342,7 @@ export default {
       cssMaxWidth: this.imgObj.width,
       cssMaxHeight: this.imgObj.height
     })
-    debugger
+
     this.fp.once('loadImage', oImage => {
       this.fp.clearUndoStack()
     }) 

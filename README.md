@@ -1,29 +1,19 @@
-# shortcut
 
-## Project setup
-```
-yarn install
-```
+# 项目运行方式
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## install dependencies
+npm install
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## serve with hot reload at localhost:8080
+npm run dev
 
-### Run your tests
-```
-yarn run test
-```
+## build for production with minification
+npm run build
 
-### Lints and fixes files
-```
-yarn run lint
-```
+# 项目简介
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 第一步: 实现区域选择的截屏功能 app.vue
+ 
+## 第二步: 实现截屏图片的展示并编辑 components里面的核心代码
+ 
+## 第三步: 实现图片编辑后的自动下载 download.js

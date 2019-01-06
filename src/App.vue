@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="sel">
-      <img src="./1.jpg" class="display" alt="">
+      <img src="./test.jpg" class="display" alt="">
     </div>
     <button @click="shortcut">截屏</button>
     <photo-editor v-if="displayFlag" :imgObj="imgObj"></photo-editor>
@@ -148,10 +148,9 @@
 
           //鼠标按下事件
           mouseDown (event) { 
-            // console.log("鼠标按下")
-            if(event.target.id != "mask") return 
             // 鼠标左键按下
-            if(event.button != 0) return false
+            if(event.button != 0 || event.target.id != "mask") return false
+            console.log("鼠标按下")
             //判断页面上是否存在了区域选择的框
             if(document.querySelector('.short-cut')) {
               // 删除区域选择的盒子
@@ -175,11 +174,9 @@
 
           //鼠标移动事件
           mouseMove (event) {
-            // console.log("鼠标移动")
-
             // 如果禁止鼠标移动,就退出函数
             if(!flag.mouseMoveFlag || event.button != 0) return false
-        
+            console.log("鼠标移动")
             // 设置盒子的大小
             coord.leftX1 = event.pageX
             coord.topY1 = event.pageY
@@ -192,10 +189,9 @@
 
           //鼠标弹起事件
           mouseUp(event) { 
-            // console.log("鼠标弹起")
             // 鼠标左键按下
             if(event.button != 0) return false
-            
+            console.log("鼠标弹起")
             // 设置盒子的大小
             coord.leftX2 = event.pageX
             coord.topY2 = event.pageY
